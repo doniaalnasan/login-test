@@ -1,7 +1,7 @@
 import Styles from './Auth/login.module.css'
 
 function Login() {
-return (
+return ( 
 
 <div className={Styles.logincontainer}>
     <div className={Styles.logincard}>
