@@ -1,0 +1,132 @@
+
+.logincontainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+  padding: 30px;
+  background: linear-gradient(135deg, #eef2ff, #f8fafc);
+  box-sizing: border-box;
+}
+
+
+.logincard {
+  width: 100%;
+  max-width: 420px;
+  padding: 40px;
+  background-color: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  box-sizing: border-box;
+}
+
+.logincard h1 {
+  margin: 0 0 10px;
+  text-align: center;
+  font-size: 32px;
+  color: #1e293b;
+  text-transform: capitalize;
+}
+
+.logincard > p {
+  margin: 0 0 30px;
+  text-align: center;
+  color: #64748b;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+.formgroup {
+  margin-bottom: 20px;
+}
+
+.formgroup label {
+  display: block;
+  margin-bottom: 8px;
+  color: #334155;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.formgroup input {
+  width: 100%;
+  padding: 13px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  outline: none;
+  background-color: #f8fafc;
+  color: #1e293b;
+  font-size: 15px;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+.formgroup input::placeholder {
+  color: #94a3b8;
+}
+
+.formgroup input:focus {
+  border-color: #03aaaa;
+  background-color: #ffffff;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+.logincard button {
+  width: 100%;
+  padding: 13px;
+  margin-top: 5px;
+  border: none;
+  border-radius: 10px;
+  background-color: #03aaaa;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.logincard button:hover {
+  background-color: #03aaaa;
+  transform: translateY(-1px);
+}
+
+.authlink {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+
+.authlink a {
+  color: #03aaaa;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.authlink a:hover {
+  text-decoration: underline;
+}
+
+
+@media (max-width: 480px) {
+  .logincard {
+    padding: 28px 22px;
+  }
+
+  .logincard h1 {
+    font-size: 28px;
+  }
+
+  .authlink {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+}
+
+
+
+
