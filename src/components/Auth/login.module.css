@@ -4,9 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, sans-serif;
+  font-family:'Poppins', sans-serif;
   padding: 30px;
-  background: linear-gradient(135deg, #eef2ff, #f8fafc);
   box-sizing: border-box;
 }
 
@@ -15,71 +14,63 @@
   width: 100%;
   max-width: 420px;
   padding: 40px;
-  background-color: #ffffff;
-  border-radius: 18px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
-  box-sizing: border-box;
 }
 
 .logincard h1 {
   margin: 0 0 10px;
-  text-align: center;
   font-size: 32px;
   color: #1e293b;
   text-transform: capitalize;
 }
 
 .logincard > p {
-  margin: 0 0 30px;
-  text-align: center;
+  margin: 0 0 50px;
   color: #64748b;
   font-size: 14px;
   line-height: 1.6;
 }
 
 
-.formgroup {
+
+
+.inputSingle {
+  position: relative;
   margin-bottom: 20px;
 }
 
-.formgroup label {
-  display: block;
-  margin-bottom: 8px;
-  color: #334155;
-  font-size: 14px;
-  font-weight: 600;
+.inputSingle label {
+  position: absolute;
+  top: -7px;
+  left: 10px;
+  background: white;
+  padding: 0 4px;
+  font-size: 12px;
+  color: #555;
 }
 
-.formgroup input {
+.inputSingle input {
   width: 100%;
-  padding: 13px 14px;
-  border: 1px solid #cbd5e1;
-  border-radius: 10px;
-  outline: none;
-  background-color: #f8fafc;
-  color: #1e293b;
-  font-size: 15px;
+  height: 40px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  padding: 0 10px;
   box-sizing: border-box;
-  transition: 0.2s ease;
+  outline: none;
 }
 
-.formgroup input::placeholder {
-  color: #94a3b8;
+.inputSingle input:focus {
+  border-color: #159bd3;
 }
 
-.formgroup input:focus {
-  border-color: #03aaaa;
-  background-color: #ffffff;
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.12);
-}
 
-.logincard button {
+
+.logincard .btLogin {
   width: 100%;
   padding: 13px;
   margin-top: 5px;
   border: none;
   border-radius: 10px;
-  background-color: #03aaaa;
+  background-color: #0e70c0;
   color: #ffffff;
   font-size: 16px;
   font-weight: 600;
@@ -87,10 +78,42 @@
   transition: 0.2s ease;
 }
 
-.logincard button:hover {
-  background-color: #03aaaa;
+.logincard .btLogin:hover {
+  background-color: #2c80e0;
   transform: translateY(-1px);
 }
+.inputGroup {
+  margin-bottom: -30px;
+}
+
+
+/* checkbox and links */
+.checkboxGroup{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+}
+
+.remember input {
+  width: 13px;
+  height: 13px;
+  cursor: pointer;
+}
+
+.remember label {
+  cursor: pointer;
+  color: #444;
+}
+
 
 .authlink {
   display: flex;
@@ -99,17 +122,33 @@
 }
 
 .authlink a {
-  color: #03aaaa;
+  color: #d46363;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0 0 28px  0;
+  cursor: pointer;
+}
+
+.registrationlink {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.registrationlink p {
+  margin: 0 2px 0 0;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.registrationlink a {
+  color: #d46363;
   font-size: 14px;
   font-weight: 500;
   text-decoration: none;
   cursor: pointer;
 }
-
-.authlink a:hover {
-  text-decoration: underline;
-}
-
 
 @media (max-width: 480px) {
   .logincard {
@@ -128,5 +167,44 @@
 }
 
 
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin: 50px 0;
+}
 
+.divider span {
+    flex: 1;
+    height: 1px;
+    background: #949393;
+}
 
+.divider p {
+    font-size: 11px;
+    color: #949393;
+    white-space: nowrap;
+}
+
+/* social */
+
+.socialLogin {
+    display: flex;
+    gap: 7px;
+}
+
+.socialBtn {
+    flex: 1;
+    height: 27px;
+    background: white;
+    border: 1px solid #aaa8ff;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 11px;
+    transition: 0.2s;
+}
+
+.socalBtn FaFacebook , .socalBtn FaApple , .socalBtn FcGoogle hover{
+    background-color: #0977f5;
+  
+}

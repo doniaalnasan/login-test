@@ -1,33 +1,69 @@
 import Styles from './Auth/login.module.css'
+import { FaFacebook, FaApple } from "react-icons/fa";
+import { FcGoogle } from "react-icons/fc";
 
 function Login() {
 return ( 
 
 <div className={Styles.logincontainer}>
     <div className={Styles.logincard}>
-        <p>Welcome back! Please login to your account.</p>
+
         <h1>Login</h1>
+        <p>Login to access your travelwise account.</p>
+        
 <form >
-
-        <div className={Styles.formgroup}>
-
-            <label>Email</label>
-            <input type= "email" placeholder="Enter your Email "></input> 
+    <div className={Styles.inputGroup}>
+        <div className={Styles.inputSingle}>
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" />
         </div>
 
-        <div className={Styles.formgroup}>
-
-            <label>Password</label>
-            <input type= "password" placeholder="Enter your Password "></input> 
-
+        <div className={Styles.inputSingle}>
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" />
         </div>
-        <button type="submit">Login</button>
+    </div>
+        <div className={Styles.checkboxGroup}>
+            <div className={Styles.remember}>
+                <input type="checkbox" id="remember" />
+                <label htmlFor="remember">Remember me</label>
+            </div>
+            <div className={Styles.authlink}>
+                <a href="#">forgot password</a>
+            </div>
+        </div>
+        <button type="submit" className={Styles.btLogin}>Login</button>
 </form>
 
-        <div className={Styles.authlink}>
-            <a href="#">create account</a>
-            <a href="#">forgot password?</a>
+        <div className={Styles.registrationlink}>
+            <p>Don't have an account?</p>
+            <a href="#">Sign up</a>
         </div>
+
+        
+
+            <div className={Styles.divider}>
+                <span></span>
+                <p>Or login with</p>
+                <span></span>
+            </div>
+
+            <div className={Styles.socialLogin}>
+
+                <button className={Styles.socialBtn}>
+                    <FaFacebook size={18} color="#1877F2" />
+                </button>
+
+                <button className={Styles.socialBtn} >
+                    <FcGoogle size={18} />
+                </button>
+
+                <button className={Styles.socialBtn} >
+                    <FaApple size={18} color="#000000" />
+                </button>
+
+            </div>
+        
     </div>
 </div>
 
