@@ -1,0 +1,48 @@
+.category-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid #eee;
+  background: #fff;
+  color: #333;
+  border-radius: 999px;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+
+.category-btn:hover {
+  border-color: #b0187a;
+}
+
+.category-btn.is-active {
+  border-color: #8e1b74;
+  background: #fdf0fa;
+  color: #8e1b74;
+}
+
+/* أزرار التصنيفات مع أيقونة */
+.category-btn--icon {
+  padding: 6px 14px 6px 6px;
+  font-size: 0.85rem;
+  background: #f7f7f7;
+  border-color: transparent;
+}
+
+.category-btn__icon {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #fff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+}
+
+/* Chips صغيرة */
+.category-btn--chip {
+  padding: 5px 12px;
+  font-size: 0.78rem;
+}

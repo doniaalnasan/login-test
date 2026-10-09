@@ -1,0 +1,72 @@
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 100%;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel--top {
+  --slide-w: 37%;
+  --gap: 14px;
+  --ratio: 2 / 1;
+  --offset: 0px;
+}
+
+.carousel--main {
+  --slide-w: 64%;
+  --gap: 14px;
+  --ratio: 3.4 / 1;
+  --offset: calc((100% - var(--slide-w)) / 2);
+}
+
+.carousel-track {
+  --index: 0;
+  display: flex;
+  gap: var(--gap);
+  width: 100%;
+  transform: translateX(calc(var(--offset) - var(--index) * (var(--slide-w) + var(--gap))));
+}
+
+.carousel-track.is-animating {
+  transition: transform 0.7s ease;
+}
+
+.carousel-slide {
+  flex: 0 0 var(--slide-w);
+  aspect-ratio: var(--ratio);
+  border-radius: 22px;
+  overflow: hidden;
+  display: block;
+  background: #f3eef2;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  transition: transform 0.4s ease;
+}
+
+.carousel-slide:hover img {
+  transform: scale(1.03);
+}
+
+@media (max-width: 1024px) {
+  .carousel--top  { --slide-w: 46%; }
+  .carousel--main { --slide-w: 76%; }
+}
+
+@media (max-width: 600px) {
+  .hero { gap: 10px; }
+  .carousel--top  { --slide-w: 78%; --gap: 10px; }
+  .carousel--main { --slide-w: 88%; --gap: 10px; --ratio: 2.6 / 1; }
+  .carousel-slide { border-radius: 14px; }
+}

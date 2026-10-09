@@ -1,0 +1,297 @@
+.home {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 16px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.home-loading {
+  padding: 80px 16px;
+  text-align: center;
+  color: #8e1b74;
+}
+
+
+.section-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 12px;
+  color: #1c1c1c;
+}
+
+.empty-text {
+  color: #888;
+  padding: 30px 0;
+}
+
+
+
+
+
+/* ===== قائمة التصنيفات ===== */
+.home-categories {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 6px;
+  scrollbar-width: none;
+}
+
+.home-categories::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== الأقسام ===== */
+.home-section {
+  background: #fff;
+  border: 1px solid #f0f0f0;
+  border-radius: 24px;
+  padding: 20px;
+}
+
+/* ===== صف المنتجات ===== */
+.product-row__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.product-row__left {
+  min-width: 0;
+}
+
+.product-row__actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.arrow-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  background: #fff;
+  font-size: 1.3rem;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.arrow-btn:hover {
+  border-color: #8e1b74;
+  color: #8e1b74;
+}
+
+.view-all-btn {
+  border: 1px solid #8e1b74;
+  color: #8e1b74;
+  background: #fff;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.product-row__list {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+}
+
+.product-row__list::-webkit-scrollbar {
+  display: none;
+}
+
+.product-row__list > * {
+  scroll-snap-align: start;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* ===== Trending ===== */
+.trending {
+  display: grid;
+  grid-template-columns: 1fr 240px;
+  gap: 20px;
+  scroll-margin-top: 90px;
+}
+
+.trending__main {
+  min-width: 0;
+}
+
+.trending__promo {
+  background: linear-gradient(160deg, #8e1b74, #5b0f4a);
+  color: #fff;
+  border-radius: 20px;
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+  align-self: start;
+}
+
+.promo-badge {
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+.trending__promo h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.promo-btn {
+  background: #fff;
+  color: #8e1b74;
+  border: none;
+  border-radius: 999px;
+  padding: 7px 16px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+/* ===== Order Now ===== */
+.order-now {
+  background: #f2f9ef;
+  border-color: #e3f1dd;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.order-now__products {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.order-now__products .product-card__img {
+  background: #fff;
+}
+
+.order-now__tag {
+  color: #b0187a;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.order-now__info h2 {
+  font-size: 1.8rem;
+  margin: 8px 0 18px;
+}
+
+.order-now__stats {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 22px;
+}
+
+.order-now__stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.order-now__stats strong {
+  font-size: 1.4rem;
+}
+
+.order-now__stats span {
+  color: #666;
+  font-size: 0.8rem;
+}
+
+.order-now__btn {
+  display: inline-block;
+  background: #8e1b74;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 24px;
+  border-radius: 999px;
+  font-size: 0.9rem;
+}
+
+.order-now__btn:hover {
+  background: #6f1559;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 900px) {
+  .trending,
+  .order-now {
+    grid-template-columns: 1fr;
+  }
+
+  .order-now__info {
+    order: -1;
+  }
+}
+
+@media (max-width: 600px) {
+  .home {
+    gap: 20px;
+  }
+
+  .home-section {
+    padding: 14px;
+    border-radius: 18px;
+  }
+
+  .product-row__head {
+    flex-direction: column;
+  }
+
+  .order-now__info h2 {
+    font-size: 1.4rem;
+  }
+}
+
+
+
+/* حاوية كل منتج في قسم Order Now */
+.order-now__product {
+  position: relative;
+  
+}
+
+/* إخفاء علامة + في قسم Order Now فقط */
+.order-now__product .product-card__add {
+  display: none;
+  z-index: 10;
+}
+
+/* علامة الصح فوق يسار صورة أول منتج */
+.order-now__check {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #8e1b74;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  pointer-events: none;
+  
+}
