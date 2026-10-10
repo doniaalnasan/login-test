@@ -4,6 +4,7 @@ import { FaSearch } from "react-icons/fa";
 import  "../../styles/Navbar.css";
 import logo from "../../assets/logo.png";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { ShoppingCart } from "lucide-react";
 
 
 function Navbar(){
@@ -42,7 +43,7 @@ return (
 
     < div className="navbar__actions">
                 <Link to="/cart" className="navbar__cart">
-                    🛒<span>14</span> Cart
+                    <ShoppingCart/><span>14</span> Cart
                 
                 </Link>
                 <Link to="/login" className="navbar__login">

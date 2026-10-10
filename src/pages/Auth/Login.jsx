@@ -1,4 +1,4 @@
-import "../../styles/login.css";
+import "../../styles/Login.css";
 import { FaFacebook, FaApple } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 

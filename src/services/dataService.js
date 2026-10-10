@@ -12,10 +12,10 @@ import juiceImage from "../assets/product/drink.png";
 import CarrotsImage from "../assets/product/Carrots.png";
 // import tomatoImage from "../assets/product/tomato.png";
 // import cucumbersImage from "../assets/product/Cucumbers.png";
-// import snacksImage from "../assets/product/snacks.png";
+import snacksImage from "../assets/product/snacks.png";
 import cakeImage from "../assets/product/cake.png";
 import candyImage from "../assets/product/candy.png";
-import potatoImage from "../assets/product/potato.png";
+// import potatoImage from "../assets/product/potato.png";
 
 
 
@@ -163,7 +163,7 @@ const products = [
     id: 10,
     title: "Potato Chips",
     category: "Snacks",
-    image: potatoImage,
+    image: snacksImage,
     price: 2.49,
     oldPrice: 2.99,
     unitPrice: 2.49,
